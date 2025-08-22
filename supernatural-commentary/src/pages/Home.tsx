@@ -189,7 +189,7 @@ export default function Home() {
       .replace(/_QUOTE_:\s*/g, '\n\nQuote: ')
       .replace(/_PRAYER_:\s*/g, '\n\n')
       .replace(/_PARAGRAPH_\d*:\s*/g, '\n\n')
-      .replace(/<br\s*\/?>(?i)/g, '\n')
+      .replace(/<br\s*\/?><!--case-insensitive-->/g, '\n')
       .replace(/\n{3,}/g, '\n\n')
       .trim();
 

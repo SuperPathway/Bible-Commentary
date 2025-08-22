@@ -8,14 +8,16 @@ type TabsContextType = {
 
 const TabsContext = React.createContext<TabsContextType | null>(null);
 
-export const Tabs: React.FC<{ defaultValue: string; className?: string }> = ({ defaultValue, className, children }) => {
+type TabsProps = { defaultValue: string; className?: string; children?: React.ReactNode };
+
+export function Tabs({ defaultValue, className, children }: TabsProps) {
   const [value, setValue] = React.useState(defaultValue);
   return (
     <TabsContext.Provider value={{ value, setValue }}>
       <div className={className}>{children}</div>
     </TabsContext.Provider>
   );
-};
+}
 
 export const TabsList: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({ className, ...props }) => (
   <div className={clsx('inline-grid rounded-md bg-gray-100 p-1', className)} {...props} />
