@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+/* App utilities */
+.gradient-text {
+  background: linear-gradient(135deg, #7c3aed 0%, #a855f7 50%, #d97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.holy-glow {
+  box-shadow: 0 0 30px rgba(124, 58, 237, 0.2);
+}
+
+.divine-border {
+  border: 2px solid;
+  border-image: linear-gradient(135deg, #7c3aed, #a855f7, #d97706) 1;
+}
